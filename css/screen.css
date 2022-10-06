@@ -79,7 +79,7 @@
   --global-input-boxShadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
 
   /* Dit is voor dark theme */
-  --global-page-color: var(--color-neutral-xxxx-dark);
+  --global-page-color: var(--global-color-neutral-xxxx-dark);
   --global-page-backgroundColor: var(--color-neutral-xxxx-light);
 }
 
@@ -97,8 +97,8 @@ html {
   line-height: 1.5;
   font-family: 'Inter Web', Helvetica, arial, sans-serif;
 
-  /* color: var(--global-color-neutral-xxxx-dark); */
-  /* background-color: var(--global-color-neutral-xxxx-light); */
+  color: var(--global-color-neutral-xxxx-dark);
+  background-color: var(--global-color-neutral-xxxx-light);
 
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -108,22 +108,32 @@ html {
   background-color: var(--global-page-backgroundColor);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--color-neutral-xxxx-dark);
-  }
-} */
-
 @media (prefers-color-scheme: dark) {
   :root {
     --global-page-color: White;
-    --global-page-backgroundColor: var(--color-neutral-xxxx-dark);}
-    /* .c-logo {
-      --logo__path--1--fill: White;
-      --logo__path--2--fill: var(--logo__path--1--fill);
-      --logo__path--3--fill: var(--logo__path--1--fill);
-    } */
+    --global-page-backgroundColor: var(--global-color-neutral-xxxx-dark);
   }
+
+  .c-form-field .c-label {
+    color: #b5b6c0;
+  }
+  .c-logo {
+    --logo__path--1--fill: White;
+    --logo__path--2--fill: var(--logo__path--1--fill);
+    --logo__path--3--fill: var(--logo__path--1--fill);
+  }
+
+  .c-card__body,.c-card__footer{
+    background-color: #35374d;
+  }
+
+  .c-card-title{
+    color: White;
+  }
+  .c-input{
+    color:#20223a;
+  }
+}
 
 *,
 *:before,
@@ -895,7 +905,7 @@ input::placeholder {
 /*
     Utilities: color
     ---
-    Utility classes to put specific colors onto elements
+    Utility classes to put specific colors onto elemc-custom-option__symbolents
 */
 
 .u-color-neutral {
